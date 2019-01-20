@@ -17,6 +17,8 @@ class Resume extends Component {
       })
     }
 
+
+
     return (
       <section id="resume">
 
@@ -36,20 +38,25 @@ class BoardMember extends Component{
 
   render(){
     var imgStyle = {
-      'border-radius':'100%',
-        'padding-top':'5px',
+      'borderRadius':'100%',
+        'paddingTop':'5px',
       'aspectRatio': 1,
     };
+
+    var infoStyle = {
+      paddingTop: "10px"
+    };
+
     return <div className="row board">
        <div className="three columns header-col">
           <h1><span>{this.props.position}</span></h1>
          <div className="eleven columns">
-            <img class="board-pics" src={this.props.img} style={imgStyle}></img>
+            <img className="board-pics" src={this.props.img} style={imgStyle}></img>
          </div>
        </div>
        <div className="nine columns main-col">
           <div className="row item">
-             <div className="twelve columns">
+             <div className="twelve columns" style={infoStyle}>
                <div><h3>{this.props.name}</h3>
                <p className="info">{this.props.year + " year"} <span>&bull;</span><em className="date">{this.props.major + " major"}</em></p>
                <p>Description</p></div>
