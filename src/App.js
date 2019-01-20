@@ -33,8 +33,6 @@ class App extends Component {
         this.setState({resumeData: data});
       }.bind(this),
       error: function(xhr, status, err){
-        console.log(err);
-        alert(err);
       }
     });
   }
@@ -46,13 +44,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header data={this.state.resumeData.main}/>
-        <About data={this.state.resumeData.main}/>
-        <Resume data={this.state.resumeData.resume}/>
-        <Portfolio data={this.state.resumeData.portfolio}/>
-        <Testimonials data={this.state.resumeData.testimonials}/>
-        <Contact data={this.state.resumeData.main}/>
-        <Footer data={this.state.resumeData.main}/>
+        <Header/>
+        <About/>
+        <Resume/>
+        <Portfolio/>
+        <Testimonials/>
+        <Contact/>
+        <Footer/>
       </div>
     );
   }
