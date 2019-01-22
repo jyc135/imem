@@ -20,7 +20,7 @@ class Resume extends Component {
 
 
     return (
-      <section id="resume">
+      <section id="board">
 
       <BoardMember position = "Program Director" name="Samuel Shing" major = "Biology and Music Performance" year = "Fourth" img = "images/sam.jpg"/>
       <BoardMember position = "Secretary" name="Julianne Chen" major = "Cognitive Science and Music Performance" year = "Third" img = "images/julianne.jpg"/>
