@@ -3,74 +3,48 @@ import React, { Component } from 'react';
 class Contact extends Component {
   render() {
     var message = "Feel free to contact us if you have any questions"
+
+    var buttonStyle = {
+      "outline": "none",
+        "margin-left": "0"
+    }
+
+    var divStyle = {
+      "text-align": "center"
+    }
+
+    var secStyle = {
+      "padding-top": "30px",
+      "padding-bottom": "30px"
+    }
+
     return (
-      <section id="contact">
+      <section id="contact" style = {secStyle}>
 
-         <div className="row section-head">
-
-            <div className="two columns header-col">
-
-               <h1><span>Get In Touch.</span></h1>
-
-            </div>
-
-            <div className="ten columns">
-
-                  <p className="lead">{message}</p>
-
-            </div>
-
-         </div>
-
-         <div className="row">
+         <div className="row"  style={divStyle}>
             <div className="twelve columns">
 
-               <form action="" method="post" id="contactForm" name="contactForm">
-					<fieldset>
-
                   <div>
-						   <label htmlFor="contactName">Name <span className="required">*</span></label>
-						   <input type="text" defaultValue="" size="35" id="contactName" name="contactName" onChange={this.handleChange}/>
-                  </div>
-
-                  <div>
-						   <label htmlFor="contactEmail">Email <span className="required">*</span></label>
-						   <input type="text" defaultValue="" size="35" id="contactEmail" name="contactEmail" onChange={this.handleChange}/>
-                  </div>
-
-                  <div>
-						   <label htmlFor="contactSubject">Subject</label>
-						   <input type="text" defaultValue="" size="35" id="contactSubject" name="contactSubject" onChange={this.handleChange}/>
-                  </div>
-
-                  <div>
-                     <label htmlFor="contactMessage">Message <span className="required">*</span></label>
-                     <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
-                  </div>
-
-                  <div>
-                     <button className="submit">Submit</button>
-                     <span id="image-loader">
-                        <img alt="" src="images/loader.gif" />
-                     </span>
-                  </div>
-					</fieldset>
-				   </form>
-
-           <div id="message-warning"> Error boy</div>
-				   <div id="message-success">
-                  <i className="fa fa-check"></i>Your message was sent, thank you!<br />
-				   </div>
+                  <a href="mailto:imem@ucsd.edu">
+                      <button className="submit" style={buttonStyle}>
+                        <span class="button--inner">Contact Us</span>
+                      </button>
+                    </a>
+                </div>
            </div>
-
-            <aside className="four columns footer-widgets">
-               <div className="widget widget_contact">
-
-
-				   </div>
-
-            </aside>
       </div>
+      <div className="row" style={divStyle}>
+         <div className="twelve columns">
+
+               <div>
+               <a href="https://bit.ly/winterimem">
+                   <button className="submit" style={buttonStyle}>
+                     <span class="button--inner">Join Us</span>
+                   </button>
+                 </a>
+             </div>
+        </div>
+   </div>
    </section>
     );
   }
